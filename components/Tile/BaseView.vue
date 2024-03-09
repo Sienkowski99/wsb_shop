@@ -1,98 +1,39 @@
 <template>
-    <div class="tile is-ancestor">
-        <div class="tile is-parent is-4">
-            <article class="tile is-child box">
-                <figure class="image">
-                    <img src="public\clothes1.jpg">
-                </figure>
-                <br />
-                <p class="title is-5">Marynarka Nana</p>
-                <p class="subtitle is-6">Już od: <span class="is-italic is-size-5">549,00 zł</span></p>
-            </article>
+    <div>
+        <div class="tile is-ancestor">
+            <TileTemplate v-bind:cloth="cloth" v-for="cloth in clothes.slice(0, 3)" />
         </div>
-        <div class="tile is-parent is-4">
-            <article class="tile is-child box">
-                <figure class="image">
-                    <img src="public\clothes2.jpg">
-                </figure>
-                <br />
-                <p class="title is-5">Koszula Koral White</p>
-                <p class="subtitle is-6">Już od: <span class="is-italic is-size-5">260,99 zł</span></p>
-            </article>
+        <div class="tile is-ancestor">
+            <TileTemplate v-bind:cloth="cloth" v-for="cloth in clothes.slice(3, 6)" />
         </div>
-        <div class="tile is-parent is-4">
-            <article class="tile is-child box">
-                <figure class="image">
-                    <img src="public\clothes3.jpg">
-                </figure>
-                <br />
-                <p class="title is-5">Spódnica Waja Magenta</p>
-                <p class="subtitle is-6">Już od: <span class="is-italic is-size-5">243,82 zł</span></p>
-            </article>
-        </div>
-    </div>
-    <div class="tile is-ancestor">
-        <div class="tile is-parent is-4">
-            <article class="tile is-child box">
-                <figure class="image">
-                    <img src="public\clothes4.jpg">
-                </figure>
-                <br />
-                <p class="title is-5">Spódnica waja green</p>
-                <p class="subtitle is-6">Już od: <span class="is-italic is-size-5">227,56 zł</span></p>
-            </article>
-        </div>
-        <div class="tile is-parent is-4">
-            <article class="tile is-child box">
-                <figure class="image">
-                    <img src="public\clothes5.jpg">
-                </figure>
-                <br />
-                <p class="title is-5">Koszula Koral black</p>
-                <p class="subtitle is-6">Już od: <span class="is-italic is-size-5">390,00 zł</span></p>
-            </article>
-        </div>
-        <div class="tile is-parent is-4">
-            <article class="tile is-child box">
-                <figure class="image">
-                    <img src="public\clothes6.jpg">
-                </figure>
-                <br />
-                <p class="title is-5">Płaszcz Teddy black</p>
-                <p class="subtitle is-6">Już od: <span class="is-italic is-size-5">569,16 zł</span></p>
-            </article>
-        </div>
-    </div>
-    <div class="tile is-ancestor">
-        <div class="tile is-parent is-4">
-            <article class="tile is-child box">
-                <figure class="image">
-                    <img src="public\clothes7.jpg">
-                </figure>
-                <br />
-                <p class="title is-5">Bluza Leon White</p>
-                <p class="subtitle is-6">Już od: <span class="is-italic is-size-5">130,00 zł</span></p>
-            </article>
-        </div>
-        <div class="tile is-parent is-4">
-            <article class="tile is-child box">
-                <figure class="image">
-                    <img src="public\clothes8.jpg">
-                </figure>
-                <br />
-                <p class="title is-5">Bluza Leon Black</p>
-                <p class="subtitle is-6">Już od: <span class="is-italic is-size-5">146,00 zł</span></p>
-            </article>
-        </div>
-        <div class="tile is-parent is-4">
-            <article class="tile is-child box">
-                <figure class="image">
-                    <img src="public\clothes9.jpg">
-                </figure>
-                <br />
-                <p class="title is-5">Bluzka Zorra Avocado</p>
-                <p class="subtitle is-6">Już od: <span class="is-italic is-size-5">121,87 zł</span></p>
-            </article>
+        <div class="tile is-ancestor">
+            <TileTemplate v-bind:cloth="cloth" v-for="cloth in clothes.slice(6, 9)" />
         </div>
     </div>
 </template>
+
+<script>
+import TileTemplate from "./TileTemplate.vue";
+
+export default {
+    components: {
+        TileTemplate
+    },
+
+    data() {
+        return {
+            clothes: [
+                { name: "Marynarka zielona", price: '266,99', imagePath: "clothes1.jpg" },
+                { name: "Biała koszulka", price: '300,00', imagePath: "clothes2.jpg" },
+                { name: "Spódnica Magenta", price: '221,50', imagePath: "clothes3.jpg" },
+                { name: "Spódnica zółta", price: '150,99', imagePath: "clothes4.jpg" },
+                { name: "Spódnica czarna", price: '300,00', imagePath: "clothes5.jpg" },
+                { name: "Płaszcz Borra", price: '221,50', imagePath: "clothes6.jpg" },
+                { name: "Bluzka biała", price: '130,00', imagePath: "clothes7.jpg" },
+                { name: "Bluzka czarna", price: '130,00', imagePath: "clothes8.jpg" },
+                { name: "Koszulka Avocado", price: '221,50', imagePath: "clothes9.jpg" },
+            ]
+        }
+    }
+}
+</script>
