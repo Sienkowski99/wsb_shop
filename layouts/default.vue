@@ -1,5 +1,6 @@
 <template>
-  <Top.Nav />
+  <TopNav />
+  <TileBaseView />
   <slot />
   <Footer />
 </template>
