@@ -1,3 +1,7 @@
+<script setup>
+const props = defineProps(['cloth'])
+</script>
+
 <template>
     <div class="tile is-parent is-4">
         <article class="tile is-child box">
@@ -10,9 +14,3 @@
         </article>
     </div>
 </template>
-
-<script>
-export default {
-    props: ['cloth']
-}
-</script>
