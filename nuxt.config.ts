@@ -6,6 +6,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   alias: { "@": resolve(__dirname, "/") },
   css: ["~/assets/main.scss"],
+  buildModules: ['@nuxtjs/pwa'],
   pwa: {
     "name": "wsb_shop",
     "short_name": "app",
