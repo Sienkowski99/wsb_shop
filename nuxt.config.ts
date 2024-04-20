@@ -6,11 +6,11 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   alias: { "@": resolve(__dirname, "/") },
   css: ["~/assets/main.scss"],
-  // script: [
-  //   {
-  //     src: "https://kit.fontawesome.com/f2d35917e5.js",
-  //     crossorigin: "anonymous",
-  //     // <script src="" crossorigin="anonymous"></script>
-  //   },
-  // ],
+  modules: ["@nuxtjs/google-fonts"],
+  googleFonts: {
+    families: {
+      Montserrat: true,
+      Merriweather: true,
+    },
+  },
 });
