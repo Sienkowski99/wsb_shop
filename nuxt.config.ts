@@ -6,6 +6,13 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   alias: { "@": resolve(__dirname, "/") },
   css: ["~/assets/main.scss"],
+  modules: ["@nuxtjs/google-fonts"],
+  googleFonts: {
+    families: {
+      Montserrat: true,
+      Merriweather: true,
+    },
+  },
   buildModules: ['@nuxtjs/pwa'],
   pwa: {
     "name": "wsb_shop",

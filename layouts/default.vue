@@ -1,7 +1,8 @@
 <template>
-  <Top.Nav />
+  <TopNav />
+  <TileBaseView />
+  <Header />
   <slot />
   <Footer />
 </template>
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
