@@ -22,53 +22,57 @@ const dropdown = ref(false);
           v-show="dropdown"
         >
           <div class="menu__dropdown-item">
-            <NuxtLink to="/">Kolekcja</NuxtLink>
+            <NuxtLink to="/products">Kolekcja</NuxtLink>
           </div>
 
           <div class="menu__dropdown-item">
-            <NuxtLink to="/">Sukienki | Kombinezony</NuxtLink>
+            <NuxtLink to="/products">Sukienki | Kombinezony</NuxtLink>
           </div>
 
           <div class="menu__dropdown-item">
-            <NuxtLink to="/">Bluzki | Koszule</NuxtLink>
+            <NuxtLink to="/products">Bluzki | Koszule</NuxtLink>
           </div>
 
           <div class="menu__dropdown-item">
-            <NuxtLink to="/">Marynarki</NuxtLink>
+            <NuxtLink to="/products">Marynarki</NuxtLink>
           </div>
 
           <div class="menu__dropdown-item">
-            <NuxtLink to="/">Płaszcze | Kurtki</NuxtLink>
+            <NuxtLink to="/products">Płaszcze | Kurtki</NuxtLink>
           </div>
 
           <div class="menu__dropdown-item">
-            <NuxtLink to="/">Spodnie</NuxtLink>
+            <NuxtLink to="/products">Spodnie</NuxtLink>
           </div>
 
           <div class="menu__dropdown-item">
-            <NuxtLink to="/">Spódnice</NuxtLink>
+            <NuxtLink to="/products">Spódnice</NuxtLink>
           </div>
 
           <div class="menu__dropdown-item">
-            <NuxtLink to="/">Swetry</NuxtLink>
+            <NuxtLink to="/products">Swetry</NuxtLink>
           </div>
 
           <div class="menu__dropdown-item">
-            <NuxtLink to="/">Golfy</NuxtLink>
+            <NuxtLink to="/products">Golfy</NuxtLink>
           </div>
 
           <div class="menu__dropdown-item">
-            <NuxtLink to="/">Rabat 10%</NuxtLink>
+            <NuxtLink to="/products">Rabat 10%</NuxtLink>
           </div>
         </div>
       </Transition>
 
-      <NuxtLink class="menu__item" to="/">Kolekcja zimowa</NuxtLink>
-      <NuxtLink class="menu__item" to="/">Stylizacje wieczorowe</NuxtLink>
-      <NuxtLink class="menu__item" to="/">Stylizacje codzienne</NuxtLink>
-      <NuxtLink class="menu__item" to="/">Kolekcja świąteczna</NuxtLink>
-      <NuxtLink class="menu__item" to="/">Wyprzedaż</NuxtLink>
-      <NuxtLink class="menu__item" to="/">Nowości</NuxtLink>
+      <NuxtLink class="menu__item" to="/products">Kolekcja zimowa</NuxtLink>
+      <NuxtLink class="menu__item" to="/products"
+        >Stylizacje wieczorowe</NuxtLink
+      >
+      <NuxtLink class="menu__item" to="/products"
+        >Stylizacje codzienne</NuxtLink
+      >
+      <NuxtLink class="menu__item" to="/products">Kolekcja świąteczna</NuxtLink>
+      <NuxtLink class="menu__item" to="/products">Wyprzedaż</NuxtLink>
+      <NuxtLink class="menu__item" to="/products">Nowości</NuxtLink>
     </div>
   </div>
 </template>
