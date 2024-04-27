@@ -1,8 +1,8 @@
 <script setup>
 const clothes = [
-  { name: "Marynarka zielona", price: "266,99", imagePath: "clothes1.jpg" },
-  { name: "Płaszcz Borra", price: "221,50", imagePath: "clothes6.jpg" },
-  { name: "Spódnica czarna", price: "300,00", imagePath: "clothes5.jpg" },
+  { id: 1, name: "Marynarka zielona", price: "266.99", imagePath: "clothes1.jpg" },
+  { id: 6, name: "Płaszcz Borra", price: "221.50", imagePath: "clothes6.jpg" },
+  { id: 5, name: "Spódnica czarna", price: "300.00", imagePath: "clothes5.jpg" },
 ];
 </script>
 

@@ -1,5 +1,7 @@
 <script setup>
+
 const props = defineProps(["cloth", "size"]);
+const shoppingCart = useShoppingCart();
 </script>
 
 <template>
@@ -11,8 +13,9 @@ const props = defineProps(["cloth", "size"]);
       <br />
       <p class="title is-5">{{ cloth.name }}</p>
       <p class="subtitle is-6">
-        Już od: <span class="is-italic is-size-5">{{ cloth.price }} zł</span>
+        Już od: <span class="is-italic is-size-5">{{ cloth.price.replace('.',',') }} zł</span>
       </p>
+      <button @click="shoppingCart.addToCart(cloth)">Dodaj do koszyka</button>
     </article>
   </div>
 </template>

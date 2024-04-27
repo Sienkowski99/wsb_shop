@@ -1,22 +1,44 @@
 <script setup>
+
 const drawer = ref(false);
+const shoppingCart = useShoppingCart();
+const itemsCount = computed(() => shoppingCart.itemsCount)
+const totalCost = computed(() => shoppingCart.totalCost)
 </script>
 
 <template>
   <div class="cart">
-    <img
-      class="cart__icon"
-      src="/images/icons/cart.svg"
-      alt="Cart"
-      @click="drawer = true"
-    />
-
+    <div class="cart__badge">
+      <img
+        class="cart__icon"
+        src="/images/icons/cart.svg"
+        alt="Cart"
+        @click="drawer = true"
+      />
+      <div class="cart__item-count">{{ itemsCount }}</div>
+    </div>
     <Transition>
       <div class="cart__wrapper" v-show="drawer">
         <div class="cart__overlay" @click="drawer = false" />
         <div class="cart__drawer">
           <div class="cart__content">
-            <div class="cart__message">Nie posiadasz produktów w koszyku.</div>
+            <div v-if="!shoppingCart.items.length" class="cart__message">Nie posiadasz produktów w koszyku.</div>
+            <div v-else>
+                <div class="items-total">
+                  <span class="label">Cart contents ({{ itemsCount }})</span>
+                </div>
+                <div class="cart__item" v-for="item in shoppingCart.items" :key="item.id">
+                  <div class="cart__item-image">
+                    <img :src="item.imagePath" :alt="item.name" />
+                  </div>
+                  <div class="cart__item-details">
+                    <div class="cart__item-name">{{ item.name }}</div>
+                    <div class="cart__item-price">{{ item.price }}</div>
+                    <div class="cart__item-quantity">Ilość: {{ item.quantity }}</div>
+                  </div>
+                </div>
+                <div class="cart__total-cost">Razem: {{ String(totalCost).replace('.',',') }} zł</div>
+            </div>
           </div>
           <div class="cart__close" @click="drawer = false" />
         </div>
@@ -25,7 +47,7 @@ const drawer = ref(false);
   </div>
 </template>
 
-<style>
+<style scoped>
 .cart {
   height: 26px;
 }
@@ -121,6 +143,25 @@ const drawer = ref(false);
 .v-enter-from .cart__drawer,
 .v-leave-to .cart__drawer {
   transform: translateX(300%);
+}
+
+.cart__badge {
+  position: relative;
+}
+
+.cart__item-count {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
 }
 
 @media only screen and (max-width: 1024px) {
