@@ -43,7 +43,9 @@
         <span class="has-text-black mb-2 mt-4"
           >Produkty z sezonu 2023 i wcześniejsze</span
         >
-        <button class="button is-black">Zobacz &nbsp;&nbsp;⮕</button>
+        <NuxtLink to="/products" class="button is-black"
+          >Zobacz &nbsp;&nbsp;⮕</NuxtLink
+        >
       </div>
     </div>
     <div class="promotion column">
@@ -52,7 +54,9 @@
         <span class="has-text-black mb-2 mt-4"
           >Najnowsze modele kolekcji 2024</span
         >
-        <button class="button is-black">Zobacz &nbsp;&nbsp;⮕</button>
+        <NuxtLink to="/products" class="button is-black"
+          >Zobacz &nbsp;&nbsp;⮕</NuxtLink
+        >
       </div>
     </div>
   </div>
