@@ -1,9 +1,9 @@
 <script setup>
-const props = defineProps(["cloth"]);
+const props = defineProps(["cloth", "size"]);
 </script>
 
 <template>
-  <div class="tile is-parent is-4 p-0">
+  <div class="tile is-parent p-0" :class="size ? `is-`.concat(size) : `is-4`">
     <article class="tile is-child box">
       <figure class="image">
         <img :src="cloth.imagePath" />
