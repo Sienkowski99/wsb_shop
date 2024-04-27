@@ -50,11 +50,16 @@ update();
   <div
     class="container mb-6 is-flex is-flex-direction-column is-flex-justify-center"
   >
-    <h1
-      class="is-size-2 has-text-weight-bold has-text-black my-6 has-text-centered"
-    >
-      Products
-    </h1>
+    <div class="promotion px-6 py-6 mb-6">
+      <div class="is-flex is-flex-direction-column-reverse promotion-text">
+        <span class="has-text-white is-size-3">KOLEKCJA | 2024</span>
+        <span
+          class="has-text-black mb-2 mt-4 is-size-4 has-text-weight-semibold"
+          >Najnowsze modele kolekcji
+          <span class="is-size-3 has-text-weight-bold">2024</span></span
+        >
+      </div>
+    </div>
     <div class="is-flex is-justify-content-center mb-6 custom-gap">
       <button
         @click="previousPage"
@@ -82,7 +87,27 @@ update();
         v-for="cloth in paginatedItems"
       />
     </div>
-    <div class="mx-6 has-text-gray-light">
+    <div class="is-flex is-justify-content-center mb-6 custom-gap">
+      <button
+        @click="previousPage"
+        class="button is-black is-small"
+        :disabled="selectedPage === 1"
+      >
+        Previous
+      </button>
+      <p class="is-size-5 my-auto">
+        Page {{ selectedPage }} out of {{ maxPages }}
+      </p>
+      <button
+        @click="nextPage"
+        class="button is-black is-small"
+        :disabled="selectedPage === maxPages"
+      >
+        Next
+      </button>
+    </div>
+
+    <div class="my-2 has-text-black">
       <p>
         W sezonie AW 2019 nie dzielimy kolekcji na kilka zamkniętych grup, lecz
         stawiamy na wybrane kolory i budujemy wokół nich przenikające się między
@@ -126,5 +151,11 @@ update();
   -moz-box-shadow: none;
   box-shadow: none;
   border: 2px solid rgba(0, 0, 0, 0.2);
+}
+.promotion {
+  position: relative;
+  background-image: url("https://clickfashion.pl/media/idea07_contenttypes/contenttypeentity/image/w/y/wyprzeda_.png");
+  background-size: cover;
+  height: 20rem;
 }
 </style>

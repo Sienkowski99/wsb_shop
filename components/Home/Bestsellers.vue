@@ -18,16 +18,13 @@ const clothes = [
   <div class="container my-6 p-6 wrapper">
     <TileTemplate
       v-bind:cloth="cloth"
-      v-for="cloth in clothes.slice(0, 3)"
+      v-for="cloth in clothes"
       class="shadow"
     />
   </div>
 </template>
 
 <style scoped>
-.wrapper {
-  height: 70rem;
-}
 .shadow {
   position: absolute;
   margin: 1rem;
@@ -36,16 +33,34 @@ const clothes = [
   box-shadow: 2px 13px 35px -20px rgba(0, 0, 0, 1);
   border-radius: 1rem;
 }
-.shadow:nth-of-type(3) {
-  right: 2%;
-  transform: translate(0, 40%);
+@media (max-width: 800px) {
+  .shadow {
+    position: relative;
+    margin: 1rem auto;
+    transform: none;
+  }
+  .shadow:nth-of-type(1),
+  .shadow:nth-of-type(2),
+  .shadow:nth-of-type(3) {
+    left: auto;
+    right: auto;
+  }
 }
-.shadow:nth-of-type(2) {
-  left: 50%;
-  transform: translate(-45%, 0);
-}
-.shadow:nth-of-type(1) {
-  left: 5;
-  transform: translate(0, 20%);
+@media (min-width: 800px) {
+  .wrapper {
+    height: 70rem;
+  }
+  .shadow:nth-of-type(3) {
+    right: 2%;
+    transform: translate(0, 40%);
+  }
+  .shadow:nth-of-type(2) {
+    left: 50%;
+    transform: translate(-45%, 0);
+  }
+  .shadow:nth-of-type(1) {
+    left: 5;
+    transform: translate(0, 20%);
+  }
 }
 </style>
