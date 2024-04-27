@@ -5,20 +5,32 @@
         <div class="column is-half">
           <div class="box has-text-centered">
             <h1 class="title is-1">Newsletter</h1>
-            <p>Nie przegap okazji, dołącz do naszego newslettera.</p><br/>
+            <p>Nie przegap okazji, dołącz do naszego newslettera.</p>
+            <br />
             <div class="newsletter-form-container">
-              <form id="newsletter-form" class="is-flex is-align-items-center">
+              <form id="newsletter-form" class="is-flex">
                 <div class="field">
                   <div class="control has-icons-left">
-                    <input class="input" type="email" id="email" placeholder="Podaj swój adres Email" required>
+                    <input
+                      class="input"
+                      type="email"
+                      id="email"
+                      placeholder="Podaj swój adres Email"
+                      required
+                    />
                     <span class="icon is-small is-left">
                       <i class="fas fa-envelope"></i>
                     </span>
                   </div>
                 </div>
-                <div class="field" style="margin-bottom: 0;">
+                <div class="field">
                   <div class="control">
-                    <button class="button is-dark" style="vertical-align: middle;">Zapisz się! &nbsp;&nbsp;⮕</button>
+                    <button
+                      class="button is-dark"
+                      style="vertical-align: middle"
+                    >
+                      Zapisz się! &nbsp;&nbsp;⮕
+                    </button>
                   </div>
                 </div>
               </form>
@@ -26,7 +38,7 @@
             <div class="field">
               <div class="control has-text-centered">
                 <label class="checkbox">
-                  <input type="checkbox" id="privacy" required>
+                  <input type="checkbox" id="privacy" required />
                   Zapoznałem/am się z polityką prywatności
                 </label>
               </div>
@@ -39,12 +51,12 @@
 </template>
 
 <script>
-export default {
-}
+export default {};
 </script>
 
 <style>
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -84,5 +96,6 @@ body, html {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 1rem;
 }
 </style>

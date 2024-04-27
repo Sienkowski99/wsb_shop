@@ -1,6 +1,5 @@
 <template>
-  <TopNav />
-  <TileBaseView />
+  <!-- <TileBaseView /> -->
   <Header />
   <slot />
   <Footer />
