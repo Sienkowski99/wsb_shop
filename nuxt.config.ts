@@ -16,7 +16,7 @@ export default defineNuxtConfig({
   },
   fontawesome: {
     icons: {
-      solid: ["camera-retro", "laptop", "percent", "lock", "truck-fast"],
+      solid: ["camera-retro", "laptop", "percent", "lock", "truck-fast", "trash"],
     },
   },
   buildModules: ["@nuxtjs/pwa"],
