@@ -87,6 +87,7 @@ const totalCost = computed(() => shoppingCart.totalCost)
   height: 100%;
   width: 100%;
   padding: 30px 20px 30px 30px;
+  overflow-y: auto;
 }
 
 .cart__message {

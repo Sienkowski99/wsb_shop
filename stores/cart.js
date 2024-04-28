@@ -8,17 +8,16 @@ export const useShoppingCart = defineStore('cart', {
     isEmpty: (state) => state.items.length === 0
   },
   actions: {
-    addToCart(product) {
+    addToCart(product,quantity) {
       const existingProduct = this.items.find(item => item.id === product.id);
       if (existingProduct) {
-        existingProduct.quantity++;
+        existingProduct.quantity += quantity;
       } else {
-        this.items.push({ ...product, quantity: 1 });
+        this.items.push({ ...product, quantity: quantity });
       }
-      console.log(this.items)
     },
-    removeFromCart(productId) {
-      this.items = this.items.filter(item => item.id !== productId);
+    removeFromCart(product) {
+      this.items = this.items.filter(item => item.id !== product.id);
     }
   }
 });
