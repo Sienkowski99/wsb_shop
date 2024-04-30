@@ -11,7 +11,7 @@
           <li><a href="#">Reklamacje</a></li>
           <li><a href="#">Zwroty, wymiana</a></li>
           <li><a href="#">Kontakt</a></li>
-          <li><a href="#">Testowy link</a></li>
+          <li><a @click="toggleModal">Zgłoś błąd</a></li>
         </ul>
       </div>
       <div class="column">
@@ -38,11 +38,15 @@
       </div>
     </div>
   </div>
+
+  <ModalsReportIssue :show="showModal" @closed="toggleModal"/>
 </template>
 
-<script>
-export default {
-}
+<script setup>
+  const showModal = ref(false);
+  const toggleModal = () => {
+    showModal.value = !showModal.value;
+  };
 </script>
 
 <style scoped>
