@@ -7,7 +7,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   alias: { "@": resolve(__dirname, "/") },
   css: ["~/assets/main.scss"],
-  modules: ["@nuxtjs/google-fonts", "@vesp/nuxt-fontawesome"],
+  modules: ["@nuxtjs/google-fonts", "@vesp/nuxt-fontawesome","@pinia/nuxt"],
   googleFonts: {
     families: {
       Montserrat: true,
@@ -16,7 +16,7 @@ export default defineNuxtConfig({
   },
   fontawesome: {
     icons: {
-      solid: ["camera-retro", "laptop", "percent", "lock", "truck-fast"],
+      solid: ["camera-retro", "laptop", "percent", "lock", "truck-fast", "trash"],
     },
   },
   buildModules: ["@nuxtjs/pwa"],
