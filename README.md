@@ -1,6 +1,10 @@
-# Nuxt 3 Minimal Starter
+Contributors:
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+- Paweł 74171
+- Damian 73325
+- Michał 74172
+- Szymon 74175
+- Seweryn 40038
 
 ## Setup
 
@@ -73,4 +77,5 @@ bun run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
 # wsb_shop
